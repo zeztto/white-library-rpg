@@ -1,0 +1,36 @@
+@import './fonts.css';
+@import './tailwind.css';
+@import './theme.css';
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.font-mono {
+  font-family: ui-monospace, SFMono-Regular, monospace;
+}
+
+/* Mobile safe area padding */
+.safe-bottom {
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+/* Prevent mobile zooming on input focus */
+@media screen and (max-width: 767px) {
+  input,
+  textarea,
+  select {
+    font-size: 16px !important;
+  }
+}
+html { word-break: keep-all; overflow-wrap: anywhere; }
+body { margin: 0; line-height: 1.6; }
+h1,h2,h3 { line-height: 1.35; letter-spacing: -.025em; }
+button:focus-visible { outline: 3px solid var(--primary); outline-offset: 3px; }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; } }
+
+.game-shell { position: relative; display: flex; flex-direction: column; width: 100%; max-width: 640px; height: 100dvh; min-height: 600px; margin: 0 auto; background: #fff; border-inline: 1px solid var(--border); }
+.storage-notice { max-width: 640px; margin: 0 auto; padding: 12px 16px; color: #854000; background: #fff; border-bottom: 1px solid var(--border); font-size: 14px; }
+@media (max-width: 639px) { .game-shell { border-inline: none; } }
